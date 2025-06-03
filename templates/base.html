@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href=".\static\images\favicon.ico" />
@@ -29,9 +29,7 @@
   <body class="bg-light">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/"
-          ><i class="fa-brands fa-x-twitter fa-2xl"></i> University
-        </a>
+        <a class="navbar-brand" href="/"><img src="../static/images/unesum.png" alt="Logo" style="height: 40px;" /> Unesum</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,23 +44,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">Principal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/aboutus">About Us</a>
+              <a class="nav-link" href="/aboutus">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/academics">Academics</a>
+              <a class="nav-link" href="/academics">Cursos</a>
             </li>
 
-            {% if current_user.is_authenticated %} {% if current_user.role ==
-            'student' %}
+            {% if current_user.is_authenticated %} {% if current_user.role == 'student' %}
             <li class="nav-item">
-              <a class="nav-link" href="student">Student Dashboard</a>
+              <a class="nav-link" href="student">Panel de Estudiantes</a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="/admin">Admin Dashboard</a>
+              <a class="nav-link" href="/admin">Panel de Administrador</a>
             </li>
             {% endif %}
             <li class="nav-item dropdown">
@@ -73,14 +70,14 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Other
+                Otros
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="/aboutus">Miscellaneous </a>
+                  <a class="dropdown-item" href="/aboutus">Varios</a>
                 </li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+                <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -96,15 +93,14 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Other
+                Otros
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/login">Log In</a></li>
+                <li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a class="dropdown-item" href="/"
-                    >Join us at
-                    <i class="fa-brands fa-x-twitter fa-sm"></i> now</a
+                    >Únete a nosotros ahora</a
                   >
                 </li>
               </ul>
@@ -117,19 +113,18 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Buscar"
               aria-label="Search"
             />
             <button class="btn btn-outline-info disabled" type="submit">
-              Search
+              Buscar
             </button>
           </form>
         </div>
       </div>
     </nav>
 
-    {% with messages=get_flashed_messages(with_categories=true) %} {% if
-    messages %} {% for category, message in messages %}
+    {% with messages=get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
 
     <div
       class="alert alert-{{category}} alert-dismissible fade show"
@@ -156,11 +151,11 @@
             <hr class="my-4" />
             <div class="col-lg-12">
               <p>
-                Welcome to X University, where every student's journey is unique
-                and filled with endless possibilities. Our commitment to
-                excellence in education, innovation, and community engagement
-                sets us apart. Join us in shaping the future, one inspired mind
-                at a time.
+                Bienvenido a la Unesum, donde el viaje de cada estudiante es único
+                y está lleno de posibilidades infinitas. Nuestro compromiso con
+                la excelencia en la educación continua, la innovación y el compromiso con la comunidad
+                nos distingue. Únete a nosotros para dar forma al futuro, una mente inspirada
+                a la vez.
               </p>
             </div>
           </div>
@@ -169,9 +164,9 @@
       </div>
 
       <div class="text-center p-3" style="background-color: #e6eded">
-        &copy; 2024 X University. All rights reserved.
+        &copy; 2025 UNESUM. Todos los derechos reservados.
         <br />
-        Designed with ❤️ by Amanzm00
+       
       </div>
     </footer>
 

@@ -692,8 +692,13 @@ def  phy():
         instructors = []
     return render_template("phy.html", students=students, courses=courses, instructors=instructors)
 
-
-
+@app.route('/test_connection')
+def test_connection():
+    try:
+        db.engine.execute("SELECT 1")  # Ejecuta una consulta simple
+        return "Conexión exitosa a la base de datos!"
+    except Exception as e:
+        return f"Error al conectar a la base de datos: {str(e)}"
 
 if __name__ == "__main__":
-    app.run()   
+    app.run(debug=True)   

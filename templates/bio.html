@@ -1,17 +1,17 @@
 {% extends "dept_base.html" %}
 
-{% block title %}Biology{% endblock title %}
+{% block title %}Biología{% endblock title %}
 
-{% block deptname%}Biology{% endblock deptname%}
+{% block deptname%}Biología{% endblock deptname%}
 {% block img%} 
             <img src="static\images\bio.jpg" class="card-img-top" alt="...">
 {% endblock img%}
 
-{% block about%} Step into the fascinating world of life sciences where cells are our building blocks and DNA is our blueprint! Explore the wonders of evolution, biodiversity, and the intricate dance of organisms. Whether you're dissecting frogs or decoding genomes, join us in unraveling the mysteries of life.{% endblock about%}
+{% block about%} Adéntrate en el fascinante mundo de las ciencias biológicas donde las células son nuestros bloques de construcción y el ADN es nuestro plano. ¡Explora las maravillas de la evolución, la biodiversidad y la intrincada danza de los organismos! Ya sea diseccionando ranas o decodificando genomas, únete a nosotros para desentrañar los misterios de la vida.{% endblock about%}
      
 
-{% block vision%} We envision a future where scientific discovery illuminates the beauty and complexity of the natural world. Our goal is to advance biological knowledge and inspire stewardship of our planet's diverse ecosystems.{% endblock vision%}
-{% block mission%} Our mission is to nurture curiosity and cultivate scientific inquiry in the field of biology. Through hands-on experiments and fieldwork, we empower students to explore the interconnectedness of life and develop the skills to address pressing global challenges in healthcare, conservation, and beyond.{% endblock mission%}
+{% block vision%} Imaginamos un futuro donde el descubrimiento científico ilumina la belleza y complejidad del mundo natural. Nuestro objetivo es avanzar en el conocimiento biológico e inspirar la conservación de los diversos ecosistemas de nuestro planeta.{% endblock vision%}
+{% block mission%} Nuestra misión es fomentar la curiosidad y cultivar la indagación científica en el campo de la biología. A través de experimentos prácticos y trabajo de campo, empoderamos a los estudiantes para explorar la interconexión de la vida y desarrollar las habilidades necesarias para abordar los desafíos globales en salud, conservación y más allá.{% endblock mission%}
 
 {% block content %} 
 {% if current_user.is_authenticated and current_user.role == 'admin' %}
@@ -20,26 +20,26 @@
 <div class="accordion " id="accordionExample">
     <!--1-->
     <div class="jumbotron  text-center">
-        <h1 class="display-4">Courses </h1>
+        <h1 class="display-4">Cursos </h1>
     </div> 
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="btn btn-outline-info accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-Courses            </button>
+Cursos            </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
             <div class="jumbotron text-center">
-                <a href="/add_course"><button class="btn btn-outline-secondary"><i class="fa-solid fa-plus fa-fade"></i> Add Course </button></a>
+                <a href="/add_course"><button class="btn btn-outline-secondary"><i class="fa-solid fa-plus fa-fade"></i> Agregar Curso </button></a>
                 <hr class="my-4">
             </div>
             <table class="table table-striped caption-top">
                 <thead class="table">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">course id</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Credits</th>
+                        <th scope="col">ID del curso</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Créditos</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -56,7 +56,7 @@ Courses            </button>
                 <tfoot>
                     <tr>
                         <td colspan="100%" align='center'>
-                            {{ courses|length }} Courses
+                            {{ courses|length }} Cursos
                         </td>
                     </tr>
                 </tfoot>
@@ -68,19 +68,19 @@ Courses            </button>
     <!--2-->
 
     <div class="jumbotron text-center">
-        <h1 class="display-4">Instructors </h1>
+        <h1 class="display-4">Instructores </h1>
     </div>
 
 
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="btn btn-outline-info accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-Instructors            </button>
+Instructores            </button>
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
             <div class="jumbotron text-center">
-                <a href="/add_course"><button class="btn btn-outline-secondary"><i class="fa-solid fa-plus fa-fade"></i> Add Course </button></a>
+                <a href="/add_course"><button class="btn btn-outline-secondary"><i class="fa-solid fa-plus fa-fade"></i> Agregar Curso </button></a>
                 <hr class="my-4">
             </div>
             <table class="table table-striped caption-top">
@@ -88,7 +88,7 @@ Instructors            </button>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">ID</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Nombre</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -104,7 +104,7 @@ Instructors            </button>
                 <tfoot>
                     <tr>
                         <td colspan="100%" align='center'>
-                            {{ instructors|length }} Instructors
+                            {{ instructors|length }} Instructores
                         </td>
                     </tr>
                 </tfoot>
@@ -118,14 +118,14 @@ Instructors            </button>
 
  <!--3-->
     <div class="jumbotron text-center">
-        <h1 class="display-4">Students </h1>
+        <h1 class="display-4">Estudiantes </h1>
 
     </div>
 
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="btn btn-outline-info accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-Students            </button>
+Estudiantes            </button>
       </h2>
       <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
@@ -134,7 +134,7 @@ Students            </button>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">ID</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Nombre</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -150,7 +150,7 @@ Students            </button>
                 <tfoot>
                     <tr>
                         <td colspan="100%" align='center'>
-                            {{ students|length }} Students
+                            {{ students|length }} Estudiantes
                         </td>
                     </tr>
                 </tfoot>
